@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Embedding Vega-Lite</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-rc5/vega.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0-beta.11/vega-lite.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.19/vega-embed.js"></script>
+    <title>Embedding Vega-Lite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-rc5/vega.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0-beta.11/vega-lite.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.19/vega-embed.js"></script>
 </head>
+
 <body>
 
-  <h1>Redesigning a Visualization</h1>
-  <p>Redesign of a visualization of smartphone sales according to the OEMs</p>
+    <h1>Electricity generation and consumption in India</h1>
+    <p>Redesign of a visualization of the Electricity generation and consumption in India.</p>
+    
+    <div class="test">This is the first time I am making a Visualisation online.</div>
 
-  <div class="break">
+    <div class="break">
 
-  </div>
+    </div>
 
-  <div id="vis"></div>
+    <div id="vis"></div>
 
-  <script type="text/javascript">
-    var yourVlSpec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
-      "description": "A simple bar chart with embedded data.",
-      "data": {
-        "values": [
-          {"a": "A","b": 28}, {"a": "B","b": 55}, {"a": "C","b": 43},
-          {"a": "D","b": 91}, {"a": "E","b": 81}, {"a": "F","b": 53},
-          {"a": "G","b": 19}, {"a": "H","b": 87}, {"a": "I","b": 52}
-        ]
-      },
-      "mark": "circle",
-      "encoding": {
-        "x": {"field": "a", "type": "ordinal"},
-        "y": {"field": "b", "type": "quantitative"}
-      }
-    }
-    vega.embed("#vis", yourVlSpec);
-  </script>
+    <script type="text/javascript">
+        var yourVlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
+            "description": "A simple bar chart with embedded data.",
+            "data": {
+                "values": [{
+                        "a": "A",
+                        "b": 28
+                    }, {
+                        "a": "B",
+                        "b": 55
+                    }, {
+                        "a": "C",
+                        "b": 43
+                    },
+                    {
+                        "a": "D",
+                        "b": 91
+                    }, {
+                        "a": "E",
+                        "b": 81
+                    }, {
+                        "a": "F",
+                        "b": 53
+                    },
+                    {
+                        "a": "G",
+                        "b": 19
+                    }, {
+                        "a": "H",
+                        "b": 87
+                    }, {
+                        "a": "I",
+                        "b": 52
+                    }
+                ]
+            },
+            "mark": "circle",
+            "encoding": {
+                "x": {
+                    "field": "a",
+                    "type": "ordinal"
+                },
+                "y": {
+                    "field": "b",
+                    "type": "quantitative"
+                }
+            }
+        }
+        vega.embed("#vis", yourVlSpec);
+
+    </script>
 </body>
+
 </html>
